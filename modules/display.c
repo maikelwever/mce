@@ -4773,11 +4773,11 @@ static display_type_t mdy_display_type_get(void)
         mdy_brightness_level_output.path = g_strconcat(DISPLAY_GENERIC_PATH, DISPLAY_GENERIC_BRIGHTNESS_FILE, NULL);
         mdy_brightness_level_maximum_path = g_strconcat(DISPLAY_GENERIC_PATH, DISPLAY_GENERIC_MAX_BRIGHTNESS_FILE, NULL);
     }
-    else if( mdy_display_type_get_from_sysfs_probe(&display_type) ) {
-        // nop
-    }
     else if( mdy_display_type_get_from_hybris(&display_type) ) {
         /* nop */
+    }
+    else if( mdy_display_type_get_from_sysfs_probe(&display_type) ) {
+        // nop
     }
     else {
         display_type = DISPLAY_TYPE_NONE;
