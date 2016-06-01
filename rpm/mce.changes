@@ -1,3 +1,6 @@
+* Wed Jun 06 2016 Maikel Wever <maikelwever@gmail.com> - 1.12.9.1
+- Hacks for Xperia SP's backlight and display powering off problems.
+
 * Mon Apr 15 2013 Simo Piiroinen <simo.piiroinen@jollamobile.com> - 1.12.9
 - Allow late suspend only when the device is running in the USER mode
 - Added builtin-gconf key for color profile

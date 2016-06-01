@@ -2090,6 +2090,12 @@ evin_iomon_device_add(const gchar *path)
     /* Probe device type */
     extra = evin_iomon_extra_create(fd, name);
 
+    // Sony Xperia SP activity monitoring hack.
+    if (!strcmp(name, "cyttsp4_mt")) {
+	mce_log(LL_NOTICE, "Enabling Xperia SP hack!");
+        extra->ex_type = EVDEV_TOUCH;
+    }
+
     mce_log(LL_NOTICE, "%s: name='%s' type=%s", path, name,
             evin_evdevtype_repr(extra->ex_type));
 
